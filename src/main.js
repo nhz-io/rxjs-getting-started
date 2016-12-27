@@ -1,2 +1,2 @@
 import console from './console'
-import './first-observable.js'
+import './101-first-observable.js'
