@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/nhz-io/rxjs-getting-started#readme",
   "dependencies": {
+    "run-gen": "0.0.13",
     "rxjs": "^5.0.2"
   },
   "devDependencies": {
