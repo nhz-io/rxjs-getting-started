@@ -7,7 +7,7 @@ const source = Observable.from(numbers)
 console.info('An Easier Observer')
 source.subscribe(
     val => console.log(`value: ${val}`),
-    err => console.log(`error: ${err.message || err}`),
+    err => console.error(`error: ${err.message || err}`),
     () => console.info(`complete`)
 )
 console.log()
