@@ -16,5 +16,19 @@
   "bugs": {
     "url": "https://github.com/nhz-io/rxjs-getting-started/issues"
   },
-  "homepage": "https://github.com/nhz-io/rxjs-getting-started#readme"
+  "homepage": "https://github.com/nhz-io/rxjs-getting-started#readme",
+  "dependencies": {
+    "rxjs": "^5.0.2"
+  },
+  "devDependencies": {
+    "ava": "^0.17.0",
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "nyc": "^10.0.0",
+    "open": "0.0.5",
+    "pre-push": "^0.1.1",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2",
+    "xo": "^0.17.1"
+  }
 }
