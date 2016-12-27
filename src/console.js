@@ -15,7 +15,9 @@ const n = () => `000${cnt++ % 1000}`.slice(-3)
 
 function append(...args) {
     output.appendChild(
-        document.createTextNode(`[${n()}] ${args.join('')}\n`)
+        document.createTextNode(
+            args.length > 1 ? `[${n()}] ${args.join('')}\n` : '\n'
+        )
     )
 }
 
