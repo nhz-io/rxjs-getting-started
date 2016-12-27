@@ -9,7 +9,7 @@ const source = Observable.create(observer => {
         observer.next(numbers[index++])
 
         if (index < numbers.length) {
-            setTimeout(produceValue, 1000)
+            setTimeout(produceValue, 100)
         } else {
             observer.complete()
             console.log()
