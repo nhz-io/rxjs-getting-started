@@ -5,7 +5,8 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "start": "webpack-dev-server --watch --inline",
+    "start": "webpack-dev-server --watch --inline --open",
+    "webpack": "webpack",
     "tdd": "ava --watch --verbose",
     "nyc": "xo && nyc --reporter=lcov ava",
     "report": "node -e \"require('open')('./coverage/lcov-report/index.html')\"",
@@ -26,17 +27,19 @@
   },
   "homepage": "https://github.com/nhz-io/rxjs-getting-started#readme",
   "dependencies": {
+    "run-gen": "0.0.13",
     "rxjs": "^5.0.2"
   },
   "devDependencies": {
     "ava": "^0.17.0",
     "babel-core": "^6.21.0",
     "babel-loader": "^6.2.10",
-    "babel-preset-latest": "^6.16.0",
+    "babel-plugin-transform-inline-imports-commonjs": "^1.2.0",
     "html-webpack-plugin": "^2.24.1",
     "nyc": "^10.0.0",
     "open": "0.0.5",
     "pre-push": "^0.1.1",
+    "run-gen": "0.0.13",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2",
     "xo": "^0.16.0",

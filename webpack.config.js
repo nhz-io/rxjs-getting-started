@@ -1,13 +1,15 @@
-const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const pkg = require('./package.json')
 
 module.exports = {
     xo: pkg.xo || {},
-    entry: path.resolve(__dirname, 'src/main.js'),
+    entry: './src/main.js',
     output: {
-        filename: path.resolve(__dirname, 'dist/app.js'),
+        path: 'dist',
+        filename: 'app.js',
+        devtoolLineToLine: true,
     },
+    devtool: '#eval',
     module: {
         loaders: [
             {
@@ -23,6 +25,8 @@ module.exports = {
         ],
     },
     plugins: [
-        new HtmlWebpackPlugin(),
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+        }),
     ],
 }
