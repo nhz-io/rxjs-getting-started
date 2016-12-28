@@ -1,3 +1,5 @@
 {
-    presets: ["latest"]
+    plugins: [
+        "transform-inline-imports-commonjs"
+    ]
 }
