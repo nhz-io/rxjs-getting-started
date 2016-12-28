@@ -19,6 +19,8 @@ function append(...args) {
             args.length > 1 ? `[${n()}] ${args.join('')}\n` : '\n'
         )
     )
+
+    document.body.scrollTop = document.body.scrollHeight
 }
 
 document.body.appendChild(output)

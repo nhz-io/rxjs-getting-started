@@ -7,7 +7,9 @@ module.exports = {
     output: {
         path: 'dist',
         filename: 'app.js',
+        devtoolLineToLine: true,
     },
+    devtool: '#eval',
     module: {
         loaders: [
             {
