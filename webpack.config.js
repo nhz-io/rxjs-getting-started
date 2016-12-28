@@ -1,4 +1,3 @@
-const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const pkg = require('./package.json')
 
@@ -7,7 +6,7 @@ module.exports = {
     entry: './src/main.js',
     output: {
         path: 'dist',
-        filename: 'app.js'
+        filename: 'app.js',
     },
     module: {
         loaders: [
