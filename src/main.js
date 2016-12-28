@@ -9,4 +9,4 @@ run(function* () {
     console.info('info')
     console.warn('warn')
     console.error('error')
-})
+}).catch(err => console.error(err.stack || err.message || err))
