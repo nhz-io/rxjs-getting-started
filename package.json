@@ -5,7 +5,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "start": "webpack-dev-server --watch --inline",
+    "start": "webpack-dev-server --watch --inline --open",
     "webpack": "webpack",
     "tdd": "ava --watch --verbose",
     "nyc": "xo && nyc --reporter=lcov ava",
