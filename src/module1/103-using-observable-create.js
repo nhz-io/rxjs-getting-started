@@ -1,7 +1,6 @@
 import {Observable} from 'rxjs'
-import console from './console'
 
-export default function* () {
+export default function* (console) {
     const numbers = [1, 5, 10, null]
     const source = Observable.create(observer => {
         for (const n of numbers) {

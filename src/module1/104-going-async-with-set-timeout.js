@@ -1,10 +1,6 @@
-import {Observable} from 'rxjs/Observable'
-import 'rxjs/add/operator/map'
-import 'rxjs/add/operator/filter'
+import {Observable} from 'rxjs'
 
-import console from './console'
-
-export default function* () {
+export default function* (console) {
     yield new Promise(resolve => {
         const numbers = [1, 5, 10]
         const source = Observable.create(observer => {
@@ -14,7 +10,7 @@ export default function* () {
                 observer.next(numbers[index++])
 
                 if (index < numbers.length) {
-                    setTimeout(produceValue, 150)
+                    setTimeout(produceValue, 1000)
                 } else {
                     observer.complete()
                     resolve()
@@ -22,9 +18,9 @@ export default function* () {
             }
 
             produceValue()
-        }).map(n => n * 20).filter(n => n > 100)
+        })
 
-        console.info('Importing just what we need')
+        console.info('Going Async with setTimeout')
         source.subscribe(
             val => console.log(`value: ${val}`),
             err => console.error(`error: ${err.message || err}`),
@@ -32,4 +28,3 @@ export default function* () {
         )
     })
 }
-

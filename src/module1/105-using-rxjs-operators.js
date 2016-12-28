@@ -1,7 +1,6 @@
 import {Observable} from 'rxjs'
-import console from './console'
 
-export default function* () {
+export default function* (console) {
     yield new Promise(resolve => {
         const numbers = [1, 5, 10]
         const source = Observable.create(observer => {
