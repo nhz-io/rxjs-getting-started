@@ -1,4 +1,4 @@
-/* global document */
+/* global document XMLHttpRequest */
 
 import {Observable, Subject} from 'rx'
 
@@ -28,21 +28,32 @@ export default function* (console) {
         const end = new Subject()
 
         function load(url) {
-            const xhr = new XMLHttpRequest();
+            const xhr = new XMLHttpRequest()
 
             xhr.addEventListener('load', () => {
-                const movies = JSON.parse(xhr.responseText)
-                movies.forEach(m => console.log(`Movie: ${m.title}`))
-                end.onNext()
+                try {
+                    const movies = JSON.parse(xhr.responseText)
+                    movies.forEach(m => console.log(`Movie: ${m.title}`))
+                    end.onNext()
+                } catch (err) {
+                    console.error(`error: ${err.stack || err.message || err}`)
+                }
             })
-            xhr.addEventListener('error', err => 
-               console.error(`error: ${err.stack || err.message || err}`) 
-            )
 
+            xhr.onerror = err =>
+               console.error(`error: ${err.stack || err.message || err}`)
+
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState === 4) {
+                    if (xhr.status !== 200) {
+                        console.error(`error: ${xhr.statusText}`)
+                    }
+                }
+            }
             xhr.open('GET', url)
             xhr.send()
         }
-                    
+
         const source = Observable.fromEvent(button, 'click')
 
         source.takeUntil(end).subscribe(
@@ -51,8 +62,9 @@ export default function* (console) {
             () => {
                 console.log('complete')
                 document.body.removeChild(button)
+                resolve()
             }
         )
     })
 }
-    
+
