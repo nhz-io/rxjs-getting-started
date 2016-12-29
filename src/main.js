@@ -9,5 +9,6 @@ run(function* () {
 
     for (const p of m2) {
         yield* p(console)
+        console.log()
     }
 }).catch(err => console.error(err.stack || err.message || err))
