@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const pkg = require('./package.json')
 
 module.exports = {
@@ -28,5 +29,9 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'index.html',
         }),
+        new CopyWebpackPlugin([{
+            from: 'data',
+            to: 'dist/data',
+        }]),
     ],
 }

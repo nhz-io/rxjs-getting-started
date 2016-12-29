@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/nhz-io/rxjs-getting-started#readme",
   "dependencies": {
+    "copy-webpack-plugin": "^4.0.1",
     "run-gen": "0.0.13",
     "rx": "^4.1.0"
   },
