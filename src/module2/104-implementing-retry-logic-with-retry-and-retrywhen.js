@@ -10,9 +10,9 @@ export default function* (console) {
         const buttonStyle = {
             position: 'fixed',
             top: 'calc(50% - 20px)',
-            left: 'calc(50% - 50px)',
+            left: 'calc(50% - 80px)',
             zIndex: 999,
-            width: '100px',
+            width: '160px',
             height: '40px',
         }
 
@@ -21,7 +21,7 @@ export default function* (console) {
         })
 
         button.appendChild(
-            document.createTextNode('GET MOVIES')
+            document.createTextNode('GET MOVIES (retry)')
         )
         document.body.appendChild(button)
 

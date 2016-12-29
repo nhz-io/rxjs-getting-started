@@ -8,16 +8,23 @@ export default function* (console) {
         console.info('Click red circle to stop')
 
         const tracker1 = document.createElement('div')
+        tracker1.appendChild(document.createTextNode('NEXT'))
         const tracker1Style = {
             position: 'fixed',
             background: 'red',
             zIndex: 999,
-            width: '20px',
-            height: '20px',
-            borderRadius: '20px',
-            top: 'calc(50% - 10px)',
-            left: 'calc(50% - 10px)',
+            width: '60px',
+            textAlign: 'center',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            height: '60px',
+            color: 'white',
+            borderRadius: '100%',
+            top: 'calc(50% - 30px)',
+            left: 'calc(50% - 30px)',
             cursor: 'pointer',
+            fontFamily: 'monospace',
         }
 
         Object.keys(tracker1Style).forEach(key => {
@@ -32,13 +39,13 @@ export default function* (console) {
             zIndex: 888,
             borderColor: 'red',
             borderWidth: '2px',
-            borderRadius: '40px',
+            borderRadius: '100%',
             borderStyle: 'solid',
             boxSizing: 'border-box',
-            width: '40px',
-            height: '40px',
-            top: 'calc(50% - 20px)',
-            left: 'calc(50% - 20px)',
+            width: '70px',
+            height: '70px',
+            top: 'calc(50% - 35px)',
+            left: 'calc(50% - 35px)',
         }
 
         Object.keys(tracker2Style).forEach(key => {
@@ -57,8 +64,8 @@ export default function* (console) {
 
         source.delay(500).filter(v => v.clientX > 400).subscribe(
             val => {
-                tracker1.style.top = `${val.clientY - 10}px`
-                tracker1.style.left = `${val.clientX - 10}px`
+                tracker1.style.top = `${val.clientY - 30}px`
+                tracker1.style.left = `${val.clientX - 30}px`
             },
             err => console.error(err.stack || err.message || err)
         )
@@ -67,8 +74,8 @@ export default function* (console) {
 
         debounced.subscribe(
             val => {
-                tracker2.style.top = `${val.clientY - 20}px`
-                tracker2.style.left = `${val.clientX - 20}px`
+                tracker2.style.top = `${val.clientY - 35}px`
+                tracker2.style.left = `${val.clientX - 35}px`
             },
             err => console.error(err.stack || err.message || err),
             () => {
