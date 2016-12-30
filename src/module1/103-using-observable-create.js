@@ -1,4 +1,4 @@
-import {Observable} from 'rxjs'
+import {Observable} from 'rx'
 
 export default function* (console) {
     const numbers = [1, 5, 10, null]

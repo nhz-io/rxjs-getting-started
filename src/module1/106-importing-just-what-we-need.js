@@ -1,6 +1,6 @@
-import {Observable} from 'rxjs/Observable'
-import 'rxjs/add/operator/map'
-import 'rxjs/add/operator/filter'
+import {Observable} from 'rx/Observable'
+import 'rx/add/operator/map'
+import 'rx/add/operator/filter'
 
 export default function* (console) {
     yield new Promise(resolve => {
