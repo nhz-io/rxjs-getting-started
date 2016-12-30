@@ -31,7 +31,7 @@ module.exports = {
         }),
         new CopyWebpackPlugin([{
             from: 'data',
-            to: 'dist/data',
+            to: 'data',
         }]),
     ],
 }
