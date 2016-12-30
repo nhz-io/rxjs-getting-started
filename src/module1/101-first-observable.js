@@ -5,16 +5,16 @@ export default function* (console) {
     const source = Observable.from(numbers)
 
     class Observer {
-        next(val) {
+        onNext(val) {
             console.log(`value: ${val}`)
         }
 
-        error(err) {
+        onError(err) {
             console.error(`error: ${err.message || err}`)
         }
 
-        complete() {
-            console.info(`complete`)
+        onCompleted() {
+            console.info(`completed`)
         }
     }
 

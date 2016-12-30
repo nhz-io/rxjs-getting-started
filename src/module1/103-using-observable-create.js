@@ -11,7 +11,7 @@ export default function* (console) {
             }
         }
 
-        observer.complete()
+        observer.completed()
     })
 
     console.info('Using Observable.create')

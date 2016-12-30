@@ -12,7 +12,7 @@ export default function* (console) {
                 if (index < numbers.length) {
                     setTimeout(produceValue, 1000)
                 } else {
-                    observer.complete()
+                    observer.completed()
                     resolve()
                 }
             }
