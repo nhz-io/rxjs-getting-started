@@ -2,7 +2,7 @@ import run from 'run-gen'
 
 import console from './console'
 
-import m2 from './module2'
+import m2 from './module3/index.js'
 
 run(function* () {
     console.info('Module 2\n')
