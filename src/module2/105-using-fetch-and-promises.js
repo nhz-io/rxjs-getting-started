@@ -79,7 +79,7 @@ export default function* (console) {
             movies.forEach(m => console.log(`Movie: ${m.title}`))
         }
 
-        click.flatMap(() => loadWithFetch('/data/movies.json')).takeUntil(end).subscribe(
+        click.flatMap(() => loadWithFetch('./data/movies.json')).takeUntil(end).subscribe(
             val => {
                 renderMovies(val)
                 end.onNext()

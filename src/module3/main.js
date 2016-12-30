@@ -29,7 +29,7 @@ export default function* (console) {
             .delay(delay)
 
     yield new Promise(resolve => {
-        load('/data/movies.json')
+        load('./data/movies.json')
             .retryWhen(retryStrategy())
             .subscribe(
                 renderMovies,

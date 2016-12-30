@@ -57,7 +57,7 @@ export default function* (console) {
         const source = Observable.fromEvent(button, 'click')
 
         source.takeUntil(end).subscribe(
-            val => load('/data/movies.json'),
+            val => load('./data/movies.json'),
             err => console.error(`error: ${err.stack || err.message || err}`),
             () => {
                 console.log('complete')
