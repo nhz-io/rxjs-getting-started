@@ -1,0 +1,8 @@
+*
+!.gitignore
+!.gitattributes
+!index.html
+!app.js
+!data
+!data/*
+
