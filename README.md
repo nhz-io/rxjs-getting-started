@@ -1,6 +1,6 @@
 # RxJS pluralsight gettings started
 
-Course: https://app.pluralsight.com/library/courses/reactive-programming-rxjs-getting-started
+Course: https://app.pluralsight.com/library/courses/reactive-programming-rxjs-getting-started  
 Built solution: https://nhz-io.github.io/rxjs-getting-started/
 
 ## Overview
