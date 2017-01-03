@@ -5,8 +5,8 @@ Built solution: https://nhz-io.github.io/rxjs-getting-started/
 
 ## Overview
 
-Minimal project structure to be able to run through the course. This differs slightly from
-what is presented during the course, some noticeable changes:
+Minimal project structure to be able to run through the course.  
+This differs slightly from what is presented during the course, some noticeable changes:  
 
 * RxJS downgraded to v4 (v5 is beta, api is broken - at least while i was messing with it)
 * Console messages are being redirected to the webpage, to avoid opening devtools for naught
